@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<title>Teste Frontend VAGAS.com</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="./styles/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<script type="text/javascript" src="./script/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+	<div class="box">
+		<div class="header">
+			<p class="title">Formulário<br />para compra de<br/><span>Pacote de Stickers</span</p> <!--Modificado, tag P ao lugar da DIV-->
+			<img src="./images/box.png" alt="Caixa">
+		</div>
+		
+
+		<form class="form" method="GET" onsubmit="">
+			<div class="fieldset1">  <!--Modificado a classe e adicionando label no lugar de div-->
+				<label for="checkbox" class="bold">Quais stickers:</label>
+
+				<label>
+					<input type="checkbox" name="checkbox" value="React" >
+					<span class="checked"> React</span>
+
+					<input type="checkbox" name="checkbox" value="Vue"  >
+					<span class="checked"> Vue</span>
+
+					<input type="checkbox" name="checkbox" value="Native" >
+					<span class="checked"> Native</span>
+					
+				</label>
+
+				
+
+				<!--<div><input type="checkbox" /> React</div>
+				<div><input type="checkbox" /> Vue</div>
+				<div><input type="checkbox" /> Angular</div>-->
+			</div>
+			
+			<div class="fieldset2">
+				<label for="counter" class="bold" >Quantos stickers de cada?</label>
+
+				<div class="div-count">   <!--Coloquei os svgs dentro de um button para manipular o JS-->
+				<button class="counter" disabled="true">
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" id="decremento">
+					<path d="M4.667 0A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667zm28 23.333H9.333v-4.666h23.334v4.666z" /></svg>
+				</button>
+					
+					<input type="text" value="0" id="number"  class="count-input" required />
+
+				<button class="counter" disabled="true">
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" id="incremento">
+					<path d="M4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42zm4.666-23.333h9.334V9.333h4.666v9.334h9.334v4.666h-9.334v9.334h-4.666v-9.334H9.333v-4.666z" /></svg>
+				</button></div>
+				
+			</div>
+			
+			
+			<div class="fieldset">
+				<label for="descricao" class="bold" >Observações:</label> <!-- Modificado, Label, sem div-->
+				<textarea name="descricao" placeholder="-Insira aqui suas informações" required></textarea>
+			</div>
+
+			<div class="footer">
+				<p class="mensage"></p>
+				<button class="disab" type="submit">Enviar</button>
+				
+			</div>
+		</form>
+	</div>
+
+	<script src="./script/functions.js"></script>
+</body>
+
+</html>

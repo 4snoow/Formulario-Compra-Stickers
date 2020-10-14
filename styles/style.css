@@ -1,0 +1,294 @@
+@import url("https://rsms.me/inter/inter.css");
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  
+}
+
+body {
+  background-color:#663399 !important ; /*Resolver bug  do background color*/
+  color: #071723;
+  margin: 0;
+  padding: 0;
+  
+  
+  
+}
+
+.box {
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  margin: 20px auto;
+  overflow: hidden;
+  width: 550px;
+}
+
+/*(Removido).space {
+  margin-bottom: 16px;
+}*/
+
+/*(Removido) .space-md {
+  margin-bottom: 32px;
+}*/
+
+ .bold {  /*Modificado os Label com classe bold*/
+  font-size: 18px;
+  font-weight: 650; /*Modificado, bold das label*/
+}
+
+.header {
+  height: 187px;
+  padding: 23px 36px;
+  width: 100%;
+  background-color: #2F3676;   /*Modificado*/
+  border-radius:0% 0% 55% 70% / 10% 10% 95% 58%; /*Modificado, borda header*/
+  
+}
+
+.header .title {
+  color: #F2F2F2; /*Modificado*/
+  font-size: 23px;
+  font-weight: 300;
+}
+
+.header .title span {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.46;
+}
+
+.header img{     /*Colocando imagem no header */
+  height: 150px;
+  margin-left: 100px;
+  position: absolute;
+  margin-top: -75px;
+  
+  
+}
+
+
+.form textarea {
+  background: #DDE3E9;
+  border: 1.5px solid #2f36768c;
+  border-radius: 8px;
+  color: #071723;
+  height: 140px;
+  padding: 16px;
+  resize: none;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 10px; /*Modificado, inserir margem no top*/
+}
+
+.form{
+  margin-top: 16px; /*Modificado, espaço do form no topo no lugar da div space*/
+}
+
+
+
+
+.fieldset, .fieldset1 {
+  padding: 0 32px;
+  margin-bottom: 32px; /*Modificado, margin botton no lugar da Div Space-md*/
+}
+
+.fieldset1 {   /*Adicionando métricas para o fieldset1, com label*/
+  display: flex;
+  flex-direction:column;
+  
+  
+}
+ /*Criando checkbox personalisável*/
+.fieldset1 span {
+  cursor: pointer;
+  display: flex;
+  margin-top: 10px;
+  
+}
+
+.fieldset1 input[type='checkbox']{  /*Escondendo checkbox padrao e fazendo os ajustes necessarios*/
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  margin-top: 14px;
+  margin-left: 4px;
+  
+}
+
+.fieldset1 span:before{ /*Checkbox personalizado*/
+  content: '';
+  width: 1.3em;
+  height: 1.3em;
+  border: 2px solid #2F3676;
+  background-color: #2F3676;
+
+  margin-right: 5px;
+
+  border-radius: 2px;
+}
+
+.fieldset1 span:hover::before,
+.fieldset1 input[type='checkbox']:hover + label::before{  /*Colocando o hover no checkbox personalizado*/
+  background-color: #191847  ;
+  border-color: #191847;
+}
+
+
+.fieldset1 input[type='checkbox']:checked + span::before{ /*Criando o icone de checked*/
+  background-color:#2F3676;
+  border-color: #2F3676;
+  content:'\002714';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*-----------------------------------------------------------------------------------------------*/
+
+/*Fieldset do counter*/
+
+.fieldset2{
+  display: flex;
+  padding: 0 32px;
+}
+
+
+.counter{
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+
+  
+}
+
+.div-count{
+  display: flex;
+  margin-top: 40px;
+  margin-left: -13.5rem;
+  margin-bottom: 25px;
+  
+}
+
+.counter svg {
+  fill: #2F3676; /*Modificado*/
+  cursor: pointer;
+}
+
+.counter svg:hover{   /*Hover svg*/
+  fill:#191847;
+}
+
+
+
+.count-input {
+  background: #DDE3E9;
+  border: 1.5px solid #2f36768c;
+  border-radius: 7px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 8px;
+  width: 60px;
+  height: 40px;
+  margin-top: 14px; 
+}
+
+button.counter{
+  border: none;
+  background-color:white;
+  border-radius: 10px;
+
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+/*Parte do footer*/
+
+.footer {
+  padding: 32px;
+  background: #DDE3E9;
+}
+
+.footer button {
+  appearance: none;
+  background: #2F3676;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 32px;
+  margin-left: 22rem; /*Modificado, espaço do botão*/
+  
+  
+}
+
+.footer button:disabled{  /*Configurações do disabled do botao*/
+  background-color: #87939c;
+  color: #555555;
+  border: 2px solid #555555;
+}
+
+
+.footer button:hover:enabled{ /*Estilizar o botao quando tiver Enable*/
+  background-color:#191847 ;
+  border: 0;
+  color:#fff ;
+  cursor: pointer;
+}
+
+.footer p{
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(127, 202, 127);
+  
+}
+
+
+/*Remover as bordas dos itens quando selecionados*/
+textarea:focus, input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+.footer button:focus{
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.div-count button:focus{
+  outline: 0;
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
